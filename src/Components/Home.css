@@ -1,0 +1,412 @@
+/* General Styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left:12%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #2c3e50);
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* Welcome Div Styling */
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #121212;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Icon Styling */
+  .welcome svg {
+    font-size: 3rem;
+    color: #ffffff;
+    animation: rotate 3s linear infinite;
+  }
+  
+  /* Animation: Pulsing Effect */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  /* Animation: Rotating Icon */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Background Graphics (Optional) */
+  .welcome::before,
+  .welcome::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: move 5s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  
+  .welcome::before {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -20%;
+    left: -20%;
+  }
+  
+  .welcome::after {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    bottom: -10%;
+    right: -10%;
+  }
+  
+  /* Animation: Background Movement */
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(20px, 20px);
+    }
+  }
+  
+  
+  /* Welcome Text Styling */
+  .welcome-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f39c12;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .welcome-text .highlight {
+    color: #00aaff;
+    font-style: italic;
+  }
+  
+  /* Description Styling */
+  .description {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    line-height: 1.8;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .description p {
+    font-size: 2rem;
+    color: #f39c12;/* Gray color for text */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  
+  .description p .icon {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Blue color for the icon */
+    font-size: 1.5rem; /* Larger icon size */
+  }
+  
+  /* Styling for the list items inside the paragraph */
+  .description ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #f39c12; /* Gray color for the list */
+    font-size: 1rem;
+    list-style-type: none;
+  }
+  
+  .description ul li {
+    color: #007bff; /* Blue color for list items */
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .description ul li:before {
+    color: #f39c12; /* Golden bullet points */
+    margin-right: 10px;
+  }
+
+  /* Styling for the icons */
+.welcome .FaUsersViewfinder, .description .IoIosMan {
+    font-size: 2.5rem; /* Larger icon size */
+    color: #007bff; /* Blue color for icons */
+    transition: color 0.3s ease;
+  }
+  
+  .welcome .FaUsersViewfinder:hover, .description .IoIosMan:hover {
+    color: #f39c12; /* Hover color change (Golden) */
+  }
+  
+  /* Highlighting text for key sections like "My Portfolio" */
+  .highlight {
+    color: #f39c12; /* Golden color for highlighting */
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  
+  .logo-img:hover {
+    transform: scale(1.1); /* Slight scale on hover */
+  }
+  
+  .text-align-center {
+    text-align: center;
+  }
+  
+  .justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+  
+  ul li {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  /* Logo Styling */
+  .logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Media Queries */
+  
+  /* Below 600px (Mobile) */
+  @media (max-width: 600px) {
+    .home-container {
+        padding-left:18%;
+        padding-right: 7%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  
+    .welcome-text {
+      font-size: 2.5rem;
+    }
+  
+    .description {
+      font-size: 1.2rem;
+    }
+  
+    .logo-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    ul li {
+      font-size: 1rem;
+    }
+    
+    .welcome {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .welcome svg {
+      font-size: 2.5rem;
+    }
+  
+    .welcome::before {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .welcome::after {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  
+  
+  /* 600px to 768px (Tablet) */
+  @media (min-width: 600px) and (max-width: 768px) {
+    .home-container {
+        padding-left:12%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  
+    .welcome-text {
+      font-size: 3rem;
+    }
+  
+    .description {
+      font-size: 1.4rem;
+    }
+  
+    .logo-img {
+      width: 140px;
+      height: 140px;
+    }
+  
+    ul li {
+      font-size: 1.1rem;
+    }
+
+    .welcome {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .welcome svg {
+      font-size: 2.8rem;
+    }
+  
+    .welcome::before {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .welcome::after {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+
+  
+  /* Above 997px (PC) */
+  @media (min-width: 997px) {
+    .home-container {
+        padding-left:12%;
+        padding-right: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+  
+    .welcome-text {
+      font-size: 4rem;
+    }
+  
+    .description {
+      font-size: 1.8rem;
+    }
+  
+    .logo-img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    ul li {
+      font-size: 1.4rem;
+    }
+
+    .welcome {
+      width: 160px;
+      height: 160px;
+    }
+  
+    .welcome svg {
+      font-size: 3.5rem;
+    }
+  
+    .welcome::before {
+      width: 130px;
+      height: 130px;
+    }
+  
+    .welcome::after {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+
+  
